@@ -1,0 +1,114 @@
+SLOT 1:
+class WelcomeJava
+{
+	public static void main (String args[])
+	{
+		System.out.println ("WELOCOME TO JAVA");
+	}
+}
+OUTPUT:
+
+D:\java>javac WelcomeJava.java
+
+D:\java>java WelcomeJava
+WELOCOME TO JAVA
+
+import java.io.*;
+
+public class Product
+{
+	public static void main (String args[])
+	{
+		int x,y,z;
+		x = Integer.parseInt(args[0]);
+		y = Integer.parseInt(args[1]);
+		z = x*y;
+		System.out.println ("Product of these Two Numbers is :" +z);
+	}
+}
+OUTPUT:
+
+D:\java>javac Product.java
+
+D:\java>java Product 5 4
+Product of these Two Numbers is :20
+
+import java.io.*;
+
+class Sum
+{
+	public static void main (String args[])
+	{
+		String str,str1;
+		int x, y, z;
+		try
+		{
+			DataInputStream dis = new DataInputStream (System.in);
+			System.out.println ("Enter the value of x:");
+			str = dis.readLine();
+			x = Integer.parseInt(str);
+			System.out.println ("Enter the value of y:");
+			str1 = dis.readLine();
+			y = Integer.parseInt(str1);
+			z = x + y;
+			System.out.println ("Sum of These Two Numbers is :" +z);
+		}
+		catch (IOException e) {System.out.println(e);}
+	}
+}
+OUTPUT:
+D:\java>javac Sum.java
+Note: Sum.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+D:\java>java Sum
+Enter the value of x:
+2
+Enter the value of y:
+9
+Sum of These Two Numbers is :11
+
+
+import java.io.*;
+
+class Swap
+{
+	public static void main (String args[])
+	{
+		String str, str1, str2; 
+		int x, y, t;
+		try
+		{
+			DataInputStream dis = new DataInputStream(System.in);
+			System.out.println ("Enter the value of x:");
+			str = dis.readLine();
+			x = Integer.parseInt (str);
+			System.out.println ("Enter the value of y:");
+			str1 = dis.readLine();
+			y = Integer.parseInt(str1);
+			t = x;
+			x = y;
+			y = t;
+			System.out.println ("After Swapping;");
+			System.out.println ("First Element is :" +x);
+			System.out.println ("Second Element is :" +y);
+		}
+		catch (IOException e){System.out.println (e);}
+	}
+}
+OUTPUT:
+
+D:\java>javac Swap.java
+Note: Swap.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+D:\java>java Swap
+Enter the value of x:
+13
+Enter the value of y:
+16
+After Swapping;
+First Element is :16
+Second Element is :13
+
+
